@@ -1,0 +1,252 @@
+<title>진해양봉 추석 릴스 컨펌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --ground:#F4F2ED;
+    --surface:#FFFFFF;
+    --line:#DFD8CC;
+    --line-soft:#E9E3D9;
+    --ink:#231D16;
+    --muted:#6B6257;
+    --accent:#8F6212;
+    --accent-soft:#F1E6CE;
+    --ok:#3F6B45;
+    --ok-soft:#E2EDE2;
+    --wait:#8A5A18;
+    --wait-soft:#F5E6CE;
+    --frame:#CFC6B6;
+    --serif:"Gowun Batang",'Apple SD Gothic Neo',Georgia,serif;
+    --sans:"Noto Sans KR",'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#15120F; --surface:#1E1A16; --line:#332C24; --line-soft:#282218;
+      --ink:#EDE6DB; --muted:#9A9086; --accent:#D9A23F; --accent-soft:#2E2417;
+      --ok:#8FC095; --ok-soft:#1E2A20; --wait:#D9A23F; --wait-soft:#2E2417; --frame:#3A322A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#15120F; --surface:#1E1A16; --line:#332C24; --line-soft:#282218;
+    --ink:#EDE6DB; --muted:#9A9086; --accent:#D9A23F; --accent-soft:#2E2417;
+    --ok:#8FC095; --ok-soft:#1E2A20; --wait:#D9A23F; --wait-soft:#2E2417; --frame:#3A322A;
+  }
+
+  body{background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:900px;margin:0 auto;padding-left:20px;padding-right:20px;padding-block:44px 72px;}
+
+  .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 14px;}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(30px,6vw,42px);line-height:1.25;letter-spacing:-.01em;margin:0;text-wrap:balance;}
+  .lede{margin:14px 0 0;color:var(--muted);max-width:56ch;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;}
+  .meta-row b{color:var(--ink);font-weight:500;}
+
+  .clip{padding-block:34px;border-top:1px solid var(--line-soft);}
+  .clip:first-of-type{border-top:none;padding-top:30px;}
+
+  .who{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;}
+  .who h2{font-size:20px;font-weight:700;letter-spacing:-.01em;margin:0;}
+  .who .handle{font-family:var(--mono);font-size:13px;color:var(--muted);}
+  .who .ig{font-size:13px;color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor;}
+  .who .ig:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+  .badge{font-size:11.5px;font-weight:700;letter-spacing:.02em;padding:2px 9px;border-radius:2px;}
+  .badge.ready{background:var(--ok-soft);color:var(--ok);}
+  .badge.wait{background:var(--wait-soft);color:var(--wait);}
+
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px;max-width:600px;}
+  .side{margin:0;min-width:0;}
+  .side .tag{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:7px;}
+  .side.is-after .tag{color:var(--accent);}
+  .side video{display:block;width:100%;max-width:100%;aspect-ratio:9/16;background:#000;border:1px solid var(--frame);border-radius:3px;}
+  .side.is-after video{border-color:var(--accent);}
+  .side figcaption{margin-top:7px;font-family:var(--mono);font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;}
+  .pair.solo{grid-template-columns:1fr;max-width:292px;}
+  .pending{display:flex;align-items:center;justify-content:center;text-align:center;aspect-ratio:9/16;border:1px dashed var(--line);border-radius:3px;color:var(--muted);font-size:12.5px;padding:16px;}
+
+  .note{margin:16px 0 0;padding:11px 14px;border-left:2px solid var(--accent);background:var(--surface);font-size:13.5px;max-width:60ch;}
+  .note b{color:var(--accent);font-weight:700;}
+  dl.facts{margin:14px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:13.5px;max-width:60ch;}
+  dl.facts dt{color:var(--muted);font-size:12.5px;white-space:nowrap;}
+  dl.facts dd{margin:0;}
+
+  .closing{margin-top:44px;padding-top:26px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);}
+  .closing h3{font-family:var(--serif);font-size:19px;color:var(--ink);margin:0 0 10px;font-weight:700;}
+  .closing ol{margin:0;padding-left:1.2em;}
+  .closing li{margin-bottom:5px;}
+
+  @media (max-width:520px){
+    .pair{gap:10px;}
+    .side .tag{letter-spacing:.06em;}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">진해양봉 · 추석 기획전</p>
+    <h1>진해양봉 추석 릴스 컨펌</h1>
+    <p class="lede">계정마다 비포(인플루언서 수정안)와 애프터(가편집)를 나란히 놓았습니다. 소리를 켜고 봐주세요. 확인 후 컨펌 또는 수정 요청을 카톡으로 남겨주시면 됩니다.</p>
+    <div class="meta-row">
+      <span>기준일 <b>2026년 9월 16일</b></span>
+      <span>총 <b>7개 계정</b></span>
+      <span>도착 <b>5개 계정</b></span>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="clip">
+      <div class="who">
+        <h2>이명선</h2>
+        <span class="handle">@kbeauty1004</span>
+        <a class="ig" href="https://www.instagram.com/kbeauty1004/reels/" target="_blank" rel="noopener">계정 릴스 ↗</a>
+        <span class="badge ready">컨펌 대기</span>
+      </div>
+      <div class="pair">
+        <figure class="side">
+          <span class="tag">비포 · 수정안</span>
+          <video controls preload="metadata" playsinline poster="kbeauty1004-before-poster.jpg">
+            <source src="kbeauty1004-before.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>인플루언서 원본</span><span>1:00</span></figcaption>
+        </figure>
+        <figure class="side is-after">
+          <span class="tag">애프터 · 가편집</span>
+          <video controls preload="metadata" playsinline poster="kbeauty1004-after-poster.jpg">
+            <source src="kbeauty1004-after.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>수정안 가편집</span><span>0:29</span></figcaption>
+        </figure>
+      </div>
+      <dl class="facts">
+        <dt>썸네일</dt><dd>재벌들도 선물하는 4만원대 진짜 꿀</dd>
+        <dt>길이</dt><dd>1:00 → 0:29 (31초 덜어냄)</dd>
+      </dl>
+      <p class="note">카카오톡으로 받은 파일이라 원본 화질이 406×720으로 낮습니다. 구성 기준으로 봐주시고, 최종본은 원본 화질로 올라갑니다.</p>
+    </section>
+
+    <section class="clip">
+      <div class="who">
+        <h2>별링야</h2>
+        <span class="handle">@byulingya</span>
+        <a class="ig" href="https://www.instagram.com/byulingya/reels/" target="_blank" rel="noopener">계정 릴스 ↗</a>
+        <span class="badge ready">컨펌 대기</span>
+      </div>
+      <div class="pair">
+        <figure class="side">
+          <span class="tag">비포 · 수정안</span>
+          <video controls preload="metadata" playsinline poster="byulingya-before-poster.jpg">
+            <source src="byulingya-before.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>인플루언서 원본</span><span>0:29</span></figcaption>
+        </figure>
+        <figure class="side is-after">
+          <span class="tag">애프터 · 가편집</span>
+          <video controls preload="metadata" playsinline poster="byulingya-after-poster.jpg">
+            <source src="byulingya-after.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>수정안 가편집</span><span>0:27</span></figcaption>
+        </figure>
+      </div>
+      <dl class="facts">
+        <dt>썸네일</dt><dd>1.5초 지점 · 벌집에서 꿀 흘러내리는 장면</dd>
+      </dl>
+      <p class="note"><b>썸네일 수정 거부</b> — 계정 무드와 맞지 않는다는 인플루언서 의견으로, 현재 썸네일로 갑니다.</p>
+    </section>
+
+    <section class="clip">
+      <div class="who">
+        <h2>쭐리니</h2>
+        <span class="handle">@jjulini_</span>
+        <a class="ig" href="https://www.instagram.com/jjulini_" target="_blank" rel="noopener">계정 릴스 ↗</a>
+        <span class="badge ready">컨펌 대기</span>
+      </div>
+      <div class="pair solo">
+        <figure class="side is-after">
+          <span class="tag">최종안</span>
+          <video controls preload="metadata" playsinline poster="jjulini-after-poster.jpg">
+            <source src="jjulini-after.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>최종안</span><span>0:23</span></figcaption>
+        </figure>
+      </div>
+      <dl class="facts">
+        <dt>비포 썸네일</dt><dd>2천만원 요청 거부한 명품꿀</dd>
+        <dt>애프터 썸네일</dt><dd>재벌들만 아는 명품꿀 고르는 기준 (부제: 4만원대 진짜 꿀)</dd>
+      </dl>
+      <p class="note">이 계정만 비포·애프터 없이 <b>최종안 한 편</b>입니다. 비포 영상도 같이 보셔야 하면 파일 주시면 넣겠습니다.</p>
+    </section>
+
+    <section class="clip">
+      <div class="who">
+        <h2>까리레시피</h2>
+        <span class="handle">@kkari.recipe</span>
+        <a class="ig" href="https://www.instagram.com/kkari.recipe/reels/" target="_blank" rel="noopener">계정 릴스 ↗</a>
+        <span class="badge ready">컨펌 대기</span>
+      </div>
+      <div class="pair">
+        <figure class="side">
+          <span class="tag">비포 · 수정안</span>
+          <video controls preload="metadata" playsinline poster="kkari-before-poster.jpg">
+            <source src="kkari-before.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>인플루언서 원본</span><span>0:46</span></figcaption>
+        </figure>
+        <figure class="side is-after">
+          <span class="tag">애프터 · 가편집</span>
+          <video controls preload="metadata" playsinline poster="kkari-after-poster.jpg">
+            <source src="kkari-after.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>가편집 수정안</span><span>0:34</span></figcaption>
+        </figure>
+      </div>
+      <dl class="facts">
+        <dt>길이</dt><dd>0:46 → 0:34 (12초 덜어냄)</dd>
+        <dt>썸네일</dt><dd>수정안 반영본으로 교체</dd>
+      </dl>
+    </section>
+
+    <section class="clip">
+      <div class="who">
+        <h2>푸드레시피942</h2>
+        <span class="handle">@food.recipe942</span>
+        <a class="ig" href="https://www.instagram.com/food.recipe942/reels/" target="_blank" rel="noopener">계정 릴스 ↗</a>
+        <span class="badge ready">컨펌 대기</span>
+      </div>
+      <div class="pair">
+        <figure class="side">
+          <span class="tag">비포 · 수정안</span>
+          <video controls preload="metadata" playsinline poster="food-before-poster.jpg">
+            <source src="food-before.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>인플루언서 원본</span><span>0:56</span></figcaption>
+        </figure>
+        <figure class="side is-after">
+          <span class="tag">애프터 · 가편집</span>
+          <video controls preload="metadata" playsinline poster="food-after-poster.jpg">
+            <source src="food-after.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>가편집 수정안</span><span>0:39</span></figcaption>
+        </figure>
+      </div>
+      <dl class="facts">
+        <dt>비포 썸네일</dt><dd>재벌가 귀빈선물용 명품꿀 고르는법 3가지</dd>
+        <dt>애프터 썸네일</dt><dd>위 문구 + 재벌들도 선물하는 4만원대 진짜 꿀</dd>
+        <dt>길이</dt><dd>0:56 → 0:39 (17초 덜어냄)</dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <footer class="closing">
+    <h3>확인 부탁드리는 것</h3>
+    <ol>
+      <li>썸네일 문구가 제품 포지션과 맞는지</li>
+      <li>1+등급, 한국양봉협회 QR 봉인, 탄소동위원소비 &minus;23.5&permil; 이하 — 세 가지 기준이 화면에 정확히 나오는지</li>
+      <li>1937년부터 3대째 문구가 들어갔는지</li>
+      <li>추석 기획전 가격대 안내가 맞는지</li>
+    </ol>
+  </footer>
+</div>
